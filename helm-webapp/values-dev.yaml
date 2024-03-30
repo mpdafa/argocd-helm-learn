@@ -1,17 +1,8 @@
-appName: myhelmapp
-
-port: 80
-
 replicas: 5
 
 configmap:
-  name: myhelmapp-configmap-v1
   data:
     CUSTOM_HEADER: "This is on the DEV environment!"
-
-image:
-  name: devopsjourney1/mywebapp
-  tag: latest
 
 service:
   type: LoadBalancer
